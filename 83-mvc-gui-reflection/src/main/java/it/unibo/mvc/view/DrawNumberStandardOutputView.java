@@ -9,7 +9,7 @@ import it.unibo.mvc.api.DrawResult;
  */
 public final class DrawNumberStandardOutputView implements DrawNumberView {
 
-    private static final String NEW_GAME = ": run again for a new game!";
+    private static final String NEW_GAME = ": touch the frame for a new game!";
 
     @Override
     public void setController(final DrawNumberController observer) {
