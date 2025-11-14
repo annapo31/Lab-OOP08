@@ -18,6 +18,9 @@ import javax.swing.JTextField;
 import static javax.swing.JOptionPane.showConfirmDialog;
 import static javax.swing.JOptionPane.showMessageDialog;
 
+// We must import this, otherwise SpotBugs complains.
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
+
 /**
  * Graphical {@link DrawNumberView} implementation.
  */
@@ -29,6 +32,11 @@ public final class DrawNumberSwingView implements DrawNumberView {
     private static final String GO = "Go";
     private static final String NEW_GAME = ": a new game starts!";
 
+    // Over the field, not the method.
+    @SuppressFBWarnings(
+        value = "EI2",
+        justification = "By implementation"
+    )
     private DrawNumberController controller;
     private final JFrame frame = new JFrame(FRAME_NAME);
 

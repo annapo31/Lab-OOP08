@@ -9,6 +9,9 @@ import java.util.Objects;
 import java.util.List;
 import java.util.ArrayList;
 
+// We must import this, otherwise SpotBugs complains.
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
+
 /**
  * This class implements the game controller. It orchestrates the game, exposes methods to its observers
  * (the boundaries), and sends results to them.
@@ -57,6 +60,7 @@ public final class DrawNumberControllerImpl implements DrawNumberController {
         this.model.reset();
     }
 
+    @SuppressFBWarnings("DM_EXIT")
     @Override
     public void quit() {
         /*

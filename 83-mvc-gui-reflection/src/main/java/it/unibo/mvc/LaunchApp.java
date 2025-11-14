@@ -38,8 +38,7 @@ public final class LaunchApp {
         NoSuchMethodException,
         InvocationTargetException, // Needs to be imported
         InstantiationException,
-        IllegalAccessException,
-        IllegalArgumentException {
+        IllegalAccessException {
 
         /* Old code
         // Model
